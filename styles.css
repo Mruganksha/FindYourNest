@@ -1,0 +1,60 @@
+.navbar {
+        height: 90px; /* Adjust navbar height */
+}
+.navbar-brand img {
+        height: 90px; /* Adjust logo height */
+}
+    
+@media (max-width: 1000px) {
+        .dropdown {
+            display: block; /* Show dropdown on small screens */
+        }
+}
+
+@media (min-width: 1000px) {
+        .dropdown {
+            display: none; /* Hide dropdown on medium and larger screens */
+        }
+}
+
+/*slides*/
+
+#carouselExample{
+    background-color: #AAB396;
+    height: 550px;
+    margin-top: 3%;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+.carousel-control-prev-icon, 
+  .carousel-control-next-icon {
+    background-color: #AAB396;/* Set the desired color here */
+    width: 30px;
+    height: 30px;
+  }
+
+.carousel-control-prev{
+    background-color:#AAB396;
+    border: none;
+}
+
+.carousel-control-prev:hover{
+    color: #AAB396;
+    border: #AAB396;
+}
+
+.carousel-control-next{
+    background-color: #AAB396;
+    border: none;
+}
+
+.carousel-control-next:hover{
+    color: #AAB396;
+    border: #AAB396;
+}
+
+.carousel-item img{
+    align-items: right: ;
+    width: 50px;
+    height: 500px;
+}
