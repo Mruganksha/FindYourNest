@@ -69,6 +69,7 @@
       </div>
     </div>
   </nav>
+  <!--hero section -->
   <header>
     <section class="hero">
       <div class="hero-content">
@@ -77,13 +78,15 @@
             <div class="carousel-item active">
               <h1>Welcome to</h1>
               <h1>FIND YOUR NEST</h1>
+              <br>
               <h2>"Your Perfect Stay, Just a Click Away!"</h2>
             </div>
             <div class="carousel-item">
               <h2>We didn't find it for us,</h2>
               <h2>so we created it for you</h2>
-              <h3>That's essentially our story in one sentence.
-                Crammed up hostels or cooped up PGs - not much of a choice, is it? Concerned about saftey? So we are here to solve your problem.</h3>
+              <h3>That's essentially our story in one sentence.</h3>
+              <h3>Crammed up hostels or cooped up PGs-not much of a choice, is it?</h3>
+              <h3>Concerned about saftey? So we are here to solve your problem.</h3>
               <h3>The only solution to all your queries.</h3>
             </div>
             <div class="carousel-item">
@@ -102,6 +105,123 @@
       </div>
     </section>
   </header>
-
+  <!--main body-->
+  <section class="main">
+     <div class="main">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-2 col-md-4 mb-3">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary">Hostels</button>
+              <button type="button" class="btn btn-primary">Flats</button>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-3">
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Locality</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">shivaji Nagar</a></li>
+                <li><a class="dropdown-item" href="#">kothrud</a></li>
+                <li><a class="dropdown-item" href="#">senapati bapat road</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-3">
+            <button type="button" class="btn btn-outline-primary" id="smallbut">Budget</button>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-3">
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Gender</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Male</a></li>
+                <li><a class="dropdown-item" href="#">Female</a></li>
+                <li><a class="dropdown-item" href="#">Unisex</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-3">
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Preferred by</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Students</a></li>
+                <li><a class="dropdown-item" href="#">Working Professionals</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 mb-3">
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Filters</span>
+              </button>
+              <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="filterModalLabel">Filter Options</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Occupancy Selection -->
+                            <div class="form-group">
+                                <label for="occupancySelect">Select Occupancy</label>
+                                <select class="form-control" id="occupancySelect">
+                                    <option value="">Select occupancy</option>
+                                    <option value="single">Single</option>
+                                    <option value="double">Double</option>
+                                    <option value="multiple">Multiple</option>
+                                </select>
+                            </div>
+        
+                            <!-- Facilities Selection -->
+                            <div class="form-group">
+                                <label for="facilitySelect">Select Facilities</label>
+                                <select multiple class="form-control" id="facilitySelect">
+                                    <option value="wifi">WiFi</option>
+                                    <option value="laundry">Laundry</option>
+                                    <option value="parking">Parking</option>
+                                    <option value="gym">Gym</option>
+                                    <option value="swimming">Swimming Pool</option>
+                                </select>
+                                <small class="form-text text-muted">Hold down the Ctrl (Windows) or Command (Mac) button to select multiple options.</small>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="saveButton">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Event listener for the save button
+    document.getElementById('saveButton').addEventListener('click', function () {
+        const occupancy = document.getElementById('occupancySelect').value;
+        const facilities = Array.from(document.getElementById('facilitySelect').selectedOptions).map(option => option.value);
+        
+        // You can perform any action with the selected values here
+        console.log('Occupancy:', occupancy);
+        console.log('Facilities:', facilities);
+        
+        // Close the modal after saving
+        $('#filterModal').modal('hide');
+    });
+</script>
 </body>
 </html>
