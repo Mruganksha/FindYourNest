@@ -7,7 +7,14 @@
      <!-- CSS Stylesheets -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
      <link rel="stylesheet" href="styles.css">
- 
+    
+     <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
      <!-- Font Awesome -->
      <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
  
@@ -18,79 +25,55 @@
 </head>
 
 <body>
-  <nav class="navbar" style="background-color: #F7EED3;">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-              <img src="Screenshot 2024-10-12 115801.png" alt="logo" style="height: 40px;"> <!-- Resize logo -->
-          </a>
-          <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Collapse section for mobile screens (small) -->
-          <div class="collapse navbar-collapse d-md-none" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <form class="d-flex" role="search">
-                          <input class="form-control me-2" type="search" placeholder="Find in and around..coep" aria-label="Search" style="width: 200px;"> <!-- Increase search bar size -->
-                          <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">
-                          <i class="fa-solid fa-location-crosshairs" style="color: #1c7336;"></i>
-                      </a>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Know more
-                      </a>
-                      <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">About Us</a></li>
-                          <li><a class="dropdown-item" href="#">Contact</a></li>
-                      </ul>
-                  </li>
-              </ul>
-          </div>
-
-          <!-- Direct display for medium and large screens -->
-          <div class="d-none d-md-flex ms-auto"> <!-- Flex container for larger screens -->
-              <form class="d-flex me-3" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 300px;"> <!-- Increase search bar size -->
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-              <a class="nav-link" href="#">
-                  <i class="fa-solid fa-location-crosshairs" style="color: #1c7336;"></i>
-              </a>
-              <a class="nav-link" href="#">Know more</a>
-          </div>
-      </div>
-  </nav>
-   
-  <!--slides-->
-  <div id="carouselExample" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <h1>Skip the Queue</h1>
-        <h1>Book a House Visit Today</h1>
-        <img  src="Screenshot 2024-10-14 120739.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="Screenshot 2024-10-12 115801.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Find in and around..COEP" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Log In
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Sign In</a></li>
+              <li><a class="dropdown-item" href="#">Create Account</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Know More
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Services</a></li>
+              <li><a class="dropdown-item" href="#">Our Users</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  
+  </nav>
+  <header>
+    <section class="hero">
+
+    </section>
+  </header>
+
 </body>
 </html>
