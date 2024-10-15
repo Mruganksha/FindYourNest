@@ -14,7 +14,8 @@
 }
 
 .d-flex{
-  width: 500px
+  width: 500px;
+  padding-right: 5%;
 }
 
 .nav-item{
@@ -49,4 +50,39 @@
 .hero-content {
   position: relative;
   z-index: 2; /* Keep the text/content above the overlay */
+}
+
+/*sliders*/
+.carousel-control-prev{
+  background: none;
+  outline: none;
+  border: none;
+  margin-top: 300px;
+  margin-left: 8%;
+}
+
+.carousel-control-next{
+  background: none;
+  outline: none;
+  border: none;
+  margin-top: 300px;
+  margin-right: 8%;
+}
+
+.carousel-item{
+  font-weight: bolder;
+  margin-left: 30%;
+  margin-top: 230px;
+}
+
+.carousel-item h1 {
+    font-weight: bolder;
+    font-size: 65px;
+    color: white;
+    padding-left: 3%;
+}
+
+.carousel-item h2{
+    color: white;
+    padding-top: 3%;
 }
