@@ -159,69 +159,69 @@
               <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Filters</span>
               </button>
-              <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="filterModalLabel">Filter Options</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- Occupancy Selection -->
-                            <div class="form-group">
-                                <label for="occupancySelect">Select Occupancy</label>
-                                <select class="form-control" id="occupancySelect">
-                                    <option value="">Select occupancy</option>
-                                    <option value="single">Single</option>
-                                    <option value="double">Double</option>
-                                    <option value="multiple">Multiple</option>
-                                </select>
-                            </div>
-        
-                            <!-- Facilities Selection -->
-                            <div class="form-group">
-                                <label for="facilitySelect">Select Facilities</label>
-                                <select multiple class="form-control" id="facilitySelect">
-                                    <option value="wifi">WiFi</option>
-                                    <option value="laundry">Laundry</option>
-                                    <option value="parking">Parking</option>
-                                    <option value="gym">Gym</option>
-                                    <option value="swimming">Swimming Pool</option>
-                                </select>
-                                <small class="form-text text-muted">Hold down the Ctrl (Windows) or Command (Mac) button to select multiple options.</small>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" id="saveButton">Save</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
             </div>
           </div>
         </div>
       </div>
-     </div>
-  </section>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    // Event listener for the save button
-    document.getElementById('saveButton').addEventListener('click', function () {
-        const occupancy = document.getElementById('occupancySelect').value;
-        const facilities = Array.from(document.getElementById('facilitySelect').selectedOptions).map(option => option.value);
-        
-        // You can perform any action with the selected values here
-        console.log('Occupancy:', occupancy);
-        console.log('Facilities:', facilities);
-        
-        // Close the modal after saving
-        $('#filterModal').modal('hide');
-    });
-</script>
+      <!--info-->
+      <div class="card" style="width: 52rem; height: 15rem;">
+        <img src="hostel1.png" alt="Hostel Image">
+        <div class="card-content">
+          <h1>Cosenza House</h1>
+          <p>Shivaji Nagar</p>
+          <div class="card-buttons">
+            <button type="button" class="btn btn-primary">Schedule a Visit</button>
+            <button type="button" class="btn btn-outline-primary">Contact</button>
+          </div>
+        </div>
+      </div>  
+      <!--2nd-->    
+      <div class="card" style="width: 52rem; height: 15rem;">
+        <img src="hostel1.png" alt="Hostel Image">
+        <div class="card-content">
+          <h1>Cosenza House</h1>
+          <p>Shivaji Nagar</p>
+          <div class="card-buttons">
+            <button type="button" class="btn btn-primary">Schedule a Visit</button>
+            <button type="button" class="btn btn-outline-primary">Contact</button>
+          </div>
+        </div>
+      </div> 
+      <!--3rd-->  
+      <div class="card" style="width: 52rem; height: 15rem;">
+        <img src="hostel1.png" alt="Hostel Image">
+        <div class="card-content">
+          <h1>Cosenza House</h1>
+          <p>Shivaji Nagar</p>
+          <div class="card-buttons">
+            <button type="button" class="btn btn-primary">Schedule a Visit</button>
+            <button type="button" class="btn btn-outline-primary">Contact</button>
+          </div>
+        </div>
+      </div>   
+      <!--4th-->
+      <div class="card" style="width: 52rem; height: 15rem;">
+        <img src="hostel1.png" alt="Hostel Image">
+        <div class="card-content">
+          <h1>Cosenza House</h1>
+          <p>Shivaji Nagar</p>
+          <div class="card-buttons">
+            <button type="button" class="btn btn-primary">Schedule a Visit</button>
+            <button type="button" class="btn btn-outline-primary">Contact</button>
+          </div>
+        </div>
+      </div>   
+      <!--5th-->
+      <div class="card" style="width: 52rem; height: 15rem;">
+        <img src="hostel1.png" alt="Hostel Image">
+        <div class="card-content">
+          <h1>Cosenza House</h1>
+          <p>Shivaji Nagar</p>
+          <div class="card-buttons">
+            <button type="button" class="btn btn-primary">Schedule a Visit</button>
+            <button type="button" class="btn btn-outline-primary">Contact</button>
+          </div>
+        </div>
+      </div>   
 </body>
 </html>
