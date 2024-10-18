@@ -99,24 +99,33 @@
   margin-top: 2%;
   display: flex;
   flex-direction: row; 
-  align-items: center; 
-  background-color: #f9f9f9; 
+  align-items: center;
+  background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; 
 }
 
 .card img {
-  width: 14rem;
+  width: 11rem;
   height: 15rem;
-  object-fit: cover; 
-  border-radius: 8px 0 0 8px; 
+  object-fit: cover;
+  border-radius: 8px 0 0 8px;
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-left: 1.5rem; 
+  padding-left: 1.5rem;
+}
+
+.card-content h1{
+  font-weight: bolder;
+}
+
+.card-content button{
+  height: min-content;
 }
 
 .card h1 {
@@ -131,11 +140,71 @@
 }
 
 .card-buttons {
-  margin-top: auto; 
+  margin-top: auto;
   display: flex;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
 .card-buttons button {
-  padding: 0.5rem 1rem; 
+  padding: 0.5rem 1rem;
+}
+
+.gender-text {
+  position: absolute;
+  top: 10px; /* Adjust this value to control vertical spacing */
+  right: 10px; /* Adjust this value to control horizontal spacing */
+  font-size: 18px;
+  color: #253c65;
+  font-weight: lighter;
+}
+
+.direction{
+  color: #253c65;
+  top: 58px;
+  position: absolute;
+  right: 20px;
+}
+
+.beds{
+    display: flex;
+    column-gap: 2%;
+}
+
+.beds button{
+  font-weight: lighter;
+  height: 30px;
+  width: 65px;
+}
+
+/*trail*/
+.carousel-item {
+  padding: 20px 0;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.pagination-wrapper {
+  margin-top: 20px;
+}
+
+.pagination {
+  list-style: none;
+  display: inline-block;
+}
+
+.pagination li {
+  display: inline;
+  padding: 10px 15px;
+  background-color: lightgrey;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination li.active {
+  background-color: #007bff;
+  color: white;
 }
