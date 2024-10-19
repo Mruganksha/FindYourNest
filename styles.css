@@ -95,8 +95,9 @@
 }
 
 .card {
-  margin-left: 20%;
-  margin-top: 2%;
+  /*margin-left: 20%;
+  margin-top: 2%;*/
+  margin: 10px auto;
   display: flex;
   flex-direction: row; 
   align-items: center;
@@ -118,12 +119,22 @@
   flex-direction: column;
   justify-content: space-between;
   padding-left: 1.5rem;
+  text-align: center;
 }
 
 .card-content h1{
   font-weight: bolder;
+  text-align: left;
+  color: black;
 }
 
+.card-content h1:hover{
+  text-decoration-color: #001F3F;
+}
+
+.card-content p{
+  text-align: left;
+}
 .card-content button{
   height: min-content;
 }
@@ -177,31 +188,37 @@
 }
 
 /*trail*/
-.carousel-item {
-  padding: 20px 0;
+#carousel-product{
+  justify-content: center;
+  height: 100%;
 }
 
-.product img {
-  width: 100%;
-  height: auto;
+#carousel-slide{
+    margin: 0%;
 }
 
-.pagination-wrapper {
-  margin-top: 20px;
+.product-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.pagination {
-  list-style: none;
-  display: inline-block;
+.product {
+  margin-bottom: 20px;
+}
+
+.pagination-wrapper .pagination {
+  display: inline-flex;
+  gap: 10px;
 }
 
 .pagination li {
-  display: inline;
-  padding: 10px 15px;
-  background-color: lightgrey;
-  border-radius: 50%;
-  margin: 0 5px;
   cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  color: #007bff;
 }
 
 .pagination li.active {
