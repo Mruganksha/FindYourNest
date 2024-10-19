@@ -22,7 +22,10 @@
      <!-- Bootstrap Scripts -->
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="script.js">
+     <link rel="stylesheet" href="index.js">
+
+     <!-- Add JQuery for Event Handling -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -174,11 +177,41 @@
                 <!-- Product 1 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
-                    <img src="hostel1.png" alt="Hostel Image">
+                    <img src="hostel img\pg1.png" alt="Hostel Image">
                     <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> Male</p>
-                    <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
-                       <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
+                    
+                    <!-- Directions Link -->
+                    <a href="#" class="direction" data-bs-toggle="modal" data-bs-target="#mapModal">
+                      <u><i class="fa-solid fa-location-dot"></i> Directions</u>
                     </a>
+
+                    <!-- Modal for Google Maps -->
+                    <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+                     <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="mapModalLabel">Directions to Cosenza House</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                      <!-- Google Map Iframe -->
+                       <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.7253055050264!2d73.8485828!3d18.5285503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c08eadde05cf%3A0xa674cc2078724e8c!2sCoep+Hostel!5e0!3m2!1sen!2sin!4v1637222836540!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                       </iframe>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                      </div>
+                      </div>
+                    </div>
+
                     <div class="card-content">
                       <h1>Cosenza House</h1>
                       <p>Shivaji Nagar</p>
@@ -189,30 +222,62 @@
                         <p style="color: grey; font-weight: lighter;">Starts from</p>
                         <div class="card-buttons">
                           <h6>Rs.16,699/mon</h6> <br><br>
-                          <button type="button" class="btn btn-primary">Schedule a Visit</button>
+                          <button type="button" class="btn btn-primary" data-modal-target="#modal">Schedule a Visit</button>
+                          <!--popup-->
+                          <div class="modal" id="modal">
+                            <div class="modal-header">
+                              <div class="title">Example Modal</div>
+                              <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+                            </div>
+                          </div>
+                          <div id="overlay"></div>
+
                           <button type="button" class="btn btn-outline-primary">Contact</button>
                         </div>
                     </div>
                   </div>
                 </div> 
+
                 <!-- Product 2 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
-                    <img src="hostel1.png" alt="Hostel Image">
-                    <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> Male</p>
-                    <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
-                       <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
+                    <img src="hostel img\pg2.png" alt="Hostel Image">
+                    <p class="gender-text"><i class="fa-solid fa-person-dress" style="color: #253c65;"></i> Female</p>
+                    
+                    <!-- Directions Link -->
+                    <a href="#" class="direction" id="openMap">
+                    <u><i class="fa-solid fa-location-dot"></i> Directions</u>
                     </a>
+
+                    <!-- Custom Overlay for Google Maps -->
+                    <div id="mapOverlay" class="map-overlay" style="display:none;">
+                      <div class="map-container">
+                      <button type="button" id="closeMap" class="btn-close-map">X</button>
+                      <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.7253055050264!2d73.8485828!3d18.5285503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c08eadde05cf%3A0xa674cc2078724e8c!2sCoep+Hostel!5e0!3m2!1sen!2sin!4v1637222836540!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                      </iframe>
+                      </div>
+                    </div>
+
                     <div class="card-content">
-                      <h1>Cosenza House</h1>
+                      <h1>Four Wind</h1>
                       <p>Shivaji Nagar</p>
                       <div class="beds">
-                        <button type="button" class="btn btn-secondary" disabled> Single</button>
                         <button type="button" class="btn btn-secondary" disabled>Double</button>
+                        <button type="button" class="btn btn-secondary" disabled>Triple</button>
+                        <button type="button" class="btn btn-secondary" disabled>Four</button>
                       </div>
                         <p style="color: grey; font-weight: lighter;">Starts from</p>
                         <div class="card-buttons">
-                          <h6>Rs.16,699/mon</h6> <br><br>
+                          <h6>Rs.12,000/mon</h6> <br><br>
                           <button type="button" class="btn btn-primary">Schedule a Visit</button>
                           <button type="button" class="btn btn-outline-primary">Contact</button>
                         </div>
@@ -222,13 +287,13 @@
                 <!-- Product 3 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
-                    <img src="hostel1.png" alt="Hostel Image">
-                    <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> Male</p>
+                    <img src="hostel img\pg3.png" alt="Hostel Image">
+                    <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> <i class="fa-solid fa-person-dress" style="color: #253c65;"></i> Coed</p>
                     <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
                        <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
                     </a>
                     <div class="card-content">
-                      <h1>Cosenza House</h1>
+                      <h1>Rajiv Patil</h1>
                       <p>Shivaji Nagar</p>
                       <div class="beds">
                         <button type="button" class="btn btn-secondary" disabled> Single</button>
@@ -236,7 +301,7 @@
                       </div>
                         <p style="color: grey; font-weight: lighter;">Starts from</p>
                         <div class="card-buttons">
-                          <h6>Rs.16,699/mon</h6> <br><br>
+                          <h6>Rs.7,400</h6> <br><br>
                           <button type="button" class="btn btn-primary">Schedule a Visit</button>
                           <button type="button" class="btn btn-outline-primary">Contact</button>
                         </div>
@@ -252,21 +317,20 @@
                 <!-- Product 4 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
-                    <img src="hostel1.png" alt="Hostel Image">
-                    <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> Male</p>
+                    <img src="hostel img\pg4.png" alt="Hostel Image">
+                    <p class="gender-text"><i class="fa-solid fa-person-dress" style="color: #253c65;"></i> Female</p>
                     <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
                        <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
                     </a>
                     <div class="card-content">
-                      <h1>Cosenza House</h1>
+                      <h1>Bankar Girls</h1>
                       <p>Shivaji Nagar</p>
                       <div class="beds">
-                        <button type="button" class="btn btn-secondary" disabled> Single</button>
-                        <button type="button" class="btn btn-secondary" disabled>Double</button>
+                        <button type="button" class="btn btn-secondary" disabled>Triple</button>
                       </div>
                         <p style="color: grey; font-weight: lighter;">Starts from</p>
                         <div class="card-buttons">
-                          <h6>Rs.16,699/mon</h6> <br><br>
+                          <h6>Rs.3,900/mon</h6> <br><br>
                           <button type="button" class="btn btn-primary">Schedule a Visit</button>
                           <button type="button" class="btn btn-outline-primary">Contact</button>
                         </div>
@@ -276,21 +340,20 @@
                 <!-- Product 5 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
-                    <img src="hostel1.png" alt="Hostel Image">
-                    <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> Male</p>
+                    <img src="hostel img\pg5.png" alt="Hostel Image">
+                    <p class="gender-text"><i class="fa-solid fa-person-dress" style="color: #253c65;"></i> Female</p>
                     <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
                        <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
                     </a>
                     <div class="card-content">
-                      <h1>Cosenza House</h1>
+                      <h1>Vidya Bhand</h1>
                       <p>Shivaji Nagar</p>
                       <div class="beds">
-                        <button type="button" class="btn btn-secondary" disabled> Single</button>
-                        <button type="button" class="btn btn-secondary" disabled>Double</button>
+                        <button type="button" class="btn btn-secondary" disabled>Four</button>
                       </div>
                         <p style="color: grey; font-weight: lighter;">Starts from</p>
                         <div class="card-buttons">
-                          <h6>Rs.16,699/mon</h6> <br><br>
+                          <h6>Rs.4,000/mon</h6> <br><br>
                           <button type="button" class="btn btn-primary">Schedule a Visit</button>
                           <button type="button" class="btn btn-outline-primary">Contact</button>
                         </div>
@@ -300,21 +363,21 @@
                 <!-- Product 6 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
-                    <img src="hostel1.png" alt="Hostel Image">
-                    <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> Male</p>
+                    <img src="hostel img\pg6.png" alt="Hostel Image">
+                    <p class="gender-text"><i class="fa-solid fa-person-dress" style="color: #253c65;"></i> Female</p>
                     <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
                        <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
                     </a>
                     <div class="card-content">
-                      <h1>Cosenza House</h1>
+                      <h1>Siroz Dorm</h1>
                       <p>Shivaji Nagar</p>
                       <div class="beds">
-                        <button type="button" class="btn btn-secondary" disabled> Single</button>
+                        <button type="button" class="btn btn-secondary" disabled>Triple</button>
                         <button type="button" class="btn btn-secondary" disabled>Double</button>
                       </div>
                         <p style="color: grey; font-weight: lighter;">Starts from</p>
                         <div class="card-buttons">
-                          <h6>Rs.16,699/mon</h6> <br><br>
+                          <h6>Rs.10,000/mon</h6> <br><br>
                           <button type="button" class="btn btn-primary">Schedule a Visit</button>
                           <button type="button" class="btn btn-outline-primary">Contact</button>
                         </div>
@@ -330,21 +393,20 @@
                 <!-- Product 7 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
-                    <img src="hostel1.png" alt="Hostel Image">
+                    <img src="hostel img\pg7.png" alt="Hostel Image">
                     <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> Male</p>
                     <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
                        <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
                     </a>
                     <div class="card-content">
-                      <h1>Cosenza House</h1>
+                      <h1>Jadhav PG</h1>
                       <p>Shivaji Nagar</p>
                       <div class="beds">
-                        <button type="button" class="btn btn-secondary" disabled> Single</button>
-                        <button type="button" class="btn btn-secondary" disabled>Double</button>
+                        <button type="button" class="btn btn-secondary" disabled>Triple</button>
                       </div>
                         <p style="color: grey; font-weight: lighter;">Starts from</p>
                         <div class="card-buttons">
-                          <h6>Rs.16,699/mon</h6> <br><br>
+                          <h6>Rs.6,000/mon</h6> <br><br>
                           <button type="button" class="btn btn-primary">Schedule a Visit</button>
                           <button type="button" class="btn btn-outline-primary">Contact</button>
                         </div>
@@ -354,13 +416,13 @@
                 <!-- Product 8 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
-                    <img src="hostel1.png" alt="Hostel Image">
+                    <img src="hostel img\pg8.png" alt="Hostel Image">
                     <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> Male</p>
                     <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
                        <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
                     </a>
                     <div class="card-content">
-                      <h1>Cosenza House</h1>
+                      <h1>Siddhivinayak</h1>
                       <p>Shivaji Nagar</p>
                       <div class="beds">
                         <button type="button" class="btn btn-secondary" disabled> Single</button>
@@ -368,7 +430,7 @@
                       </div>
                         <p style="color: grey; font-weight: lighter;">Starts from</p>
                         <div class="card-buttons">
-                          <h6>Rs.16,699/mon</h6> <br><br>
+                          <h6>Rs.5,999/mon</h6> <br><br>
                           <button type="button" class="btn btn-primary">Schedule a Visit</button>
                           <button type="button" class="btn btn-outline-primary">Contact</button>
                         </div>
@@ -378,21 +440,21 @@
                 <!-- Product 9 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
-                    <img src="hostel1.png" alt="Hostel Image">
-                    <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> Male</p>
+                    <img src="hostel img\pg9.png" alt="Hostel Image">
+                    <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> <i class="fa-solid fa-person-dress" style="color: #253c65;"></i> Coed</p>
                     <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
                        <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
                     </a>
                     <div class="card-content">
-                      <h1>Cosenza House</h1>
-                      <p>Shivaji Nagar</p>
+                      <h1>Sdanand</h1>
+                      <p>Decaan Gymkhana</p>
                       <div class="beds">
                         <button type="button" class="btn btn-secondary" disabled> Single</button>
                         <button type="button" class="btn btn-secondary" disabled>Double</button>
                       </div>
                         <p style="color: grey; font-weight: lighter;">Starts from</p>
                         <div class="card-buttons">
-                          <h6>Rs.16,699/mon</h6> <br><br>
+                          <h6>Rs.7,999/mon</h6> <br><br>
                           <button type="button" class="btn btn-primary">Schedule a Visit</button>
                           <button type="button" class="btn btn-outline-primary">Contact</button>
                         </div>
