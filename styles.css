@@ -257,4 +257,20 @@
   cursor: pointer;
 }
 
-/*shedule task button*/
+/*frequently asked que*/
+#questions{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#questions h1{
+  font-weight: bolder;
+}
+
+#questions span{
+   font-weight: bold;
+}
+
+#questions h5{
+  font-weight: bold;
+}
