@@ -276,7 +276,7 @@
 }
 
 /*registrations.html*/
-.container{
+#reg{
   width: 40%;
   border: 3px solid white;
   justify-content: center;
@@ -291,5 +291,99 @@
   padding-top: 2%;
   padding-left: 6%;
   padding-bottom: 2%;
-  width: 100%;
 }
+
+/*contact and location */
+.last{
+  margin-top: 3%;
+  column-gap: 0;
+}
+
+.blu{
+  background-color: #001E4B;
+  padding-right: 0%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+#column1{
+  padding-right: 0px;
+}
+
+#column2{
+  padding-left: 0px;
+  margin-right: 0px;
+}
+
+.container-last{
+  padding-left: 0%;
+}
+
+.container-last h1{
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 9%;
+}
+.container-last input{
+ width: 70%;
+ background-color: #001E4B;
+ margin-left: 100px;
+ border-color: #001E4B;
+ border-radius: 10px;
+ font-size: 25px;
+}
+.container-last textarea{
+ height: 80px;
+ width: 400px;
+ background-color: #001E4B;
+ margin-left: 100px;
+ border-color: #001E4B;
+ border-radius: 10px;
+ font-size: 25px;
+}
+
+#subject{
+  height: 40px;
+}
+.container-last button{
+ width: 300px;
+ background-color: #2F759C;
+ margin-left: 100px;
+ border-color: #2F759C;
+ border-radius: 10px;
+ font-size: 25px;
+}
+.location{
+  padding: 0;
+  background-color: #001E4B;
+  margin-right: 0px;
+}
+
+/*end-section*/
+.end{
+ background-color: #25282F;
+ color: white;
+}
+
+.end img{
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-right: 40%;
+  margin-bottom: 1%;
+  height: 90px;
+  width: 90px;
+}
+
+.fa-brands{
+  width: 50px;
+  margin-left: 0.5%;
+  margin-top: 4%;
+}
+
+.end p{
+  margin-left: 65%;
+}
+
+
+
+

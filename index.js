@@ -15,3 +15,9 @@ $('#openMap').on('click', function (e) {
 
  //shedule task
  
+ //search bar
+ const searchFun = () =>{
+   let filter = document.getElementById('myInput').value.toUpperCase();
+   let productSlide = document.getElementById('productCarousel');
+   let product = productCarousel.getElementById('carousel-slide');
+ }
