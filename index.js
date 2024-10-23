@@ -1,3 +1,24 @@
+//button slider
+document.addEventListener('DOMContentLoaded', function () {
+    var carousel = document.getElementById('productCarousel');
+    var paginationItems = document.querySelectorAll('.pagination li');
+  
+    // Listen for the 'slid.bs.carousel' event (fired after slide transition)
+    carousel.addEventListener('slid.bs.carousel', function (event) {
+      // Remove 'active' class from all pagination items
+      paginationItems.forEach(function (item) {
+        item.classList.remove('active');
+      });
+  
+      // Add 'active' class to the current pagination item
+      var currentIndex = event.to; // 'to' gives the index of the new slide
+      paginationItems[currentIndex].classList.add('active');
+    });
+  });
+  
+
+
+
 $('#openMap').on('click', function (e) {
     e.preventDefault();
     // Show the map overlay
@@ -43,7 +64,7 @@ window.addEventListener("scroll", function(){
  }
 
 
-
+//budget
  const rangeInput = document.querySelectorAll(".range-input input"),
 priceInput = document.querySelectorAll(".price-input input"),
 range = document.querySelector(".slider .progress");

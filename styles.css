@@ -28,6 +28,15 @@
   color: white;
 }
 
+header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f8f8f8; /* Example background for sticky header */
+  box-shadow: 0 4px 2px -2px gray;
+  z-index: 1000; 
+}
+
 /*hero section*/
 .hero{
    background-image: url(hero-bg.jpg);
@@ -333,8 +342,8 @@
  font-size: 25px;
 }
 .container-last textarea{
- height: 80px;
- width: 400px;
+ height: 83px;
+ width: 405px;
  background-color: #001E4B;
  margin-left: 100px;
  border-color: #001E4B;
@@ -382,6 +391,8 @@
 
 .end p{
   margin-left: 65%;
+  margin-bottom: 0%;
+  
 }
 
 /*budget button*/
@@ -489,11 +500,6 @@ input[type="range"]::-moz-range-thumb{
   height: 60px;
 }
 
-.formgrp input{
-   width: 190px;
-   border: #001F3F;
-   border-radius: 1%;
-}
 
 .visit-final{
   background-color: #001F3F;
