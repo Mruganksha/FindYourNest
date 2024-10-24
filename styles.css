@@ -58,6 +58,8 @@ header.sticky {
 .hero-content {
   position: relative;
   z-index: 2; /* Keep the text/content above the overlay */
+
+  padding: 5% 10%;
 }
 
 /*sliders*/
@@ -83,8 +85,8 @@ header.sticky {
 
 .carousel-item{
   font-weight: bolder;
-  margin-left: 30%;
-  margin-top: 230px;
+  margin-left:25%;
+  margin-top: 180px;
 }
 
 .carousel-item h1 {
@@ -97,6 +99,7 @@ header.sticky {
 .carousel-item h2{
     color: white;
 }
+
 
 /*main body*/
 .btn btn-outline-primary{

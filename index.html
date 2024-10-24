@@ -219,34 +219,23 @@
                     <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> Male</p>
                     
                     <!-- Directions Link -->
-                    <a href="#" class="direction" data-bs-toggle="modal" data-bs-target="#mapModal">
+                    <a href="#" class="direction" id="openMap">
                       <u><i class="fa-solid fa-location-dot"></i> Directions</u>
                     </a>
 
-                    <!-- Modal for Google Maps -->
-                    <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
-                     <div class="modal-dialog modal-lg">
-                      <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="mapModalLabel">Directions to Cosenza House</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                      <!-- Google Map Iframe -->
-                       <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.7253055050264!2d73.8485828!3d18.5285503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c08eadde05cf%3A0xa674cc2078724e8c!2sCoep+Hostel!5e0!3m2!1sen!2sin!4v1637222836540!5m2!1sen!2sin" 
-                        width="100%" 
+                    <!-- Custom Overlay for Google Maps -->
+                    <div id="mapOverlay" class="map-overlay" style="display:none;">
+                      <div class="map-container">
+                      <button type="button" id="closeMap" class="btn-close-map">X</button>
+                      <iframe 
+                        id="mapIframe"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.1195409215534!2d73.84934217465222!3d18.5234993690859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1f643b5053b%3A0xe2be91354aae1d1b!2sStanza%20Living%20Cosenza%20House!5e0!3m2!1sen!2sin!4v1729702109459!5m2!1sen!2sin" width="1210" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        width="100%"
                         height="450" 
                         style="border:0;" 
                         allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                       </iframe>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      </div>
-                      </div>
+                        loading="lazy">
+                      </iframe>
                       </div>
                     </div>
 
@@ -285,8 +274,9 @@
                       <div class="map-container">
                       <button type="button" id="closeMap" class="btn-close-map">X</button>
                       <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.7253055050264!2d73.8485828!3d18.5285503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c08eadde05cf%3A0xa674cc2078724e8c!2sCoep+Hostel!5e0!3m2!1sen!2sin!4v1637222836540!5m2!1sen!2sin" 
-                        width="100%" 
+                        id="mapIframe"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15130.22532639652!2d73.75047558715819!3d18.548940900000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bebf139a58d1%3A0x211f4786df40f617!2sFour%20Winds!5e0!3m2!1sen!2sin!4v1729691191023!5m2!1sen!2sin" width="1200" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        width="100%"
                         height="450" 
                         style="border:0;" 
                         allowfullscreen="" 
@@ -314,14 +304,34 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- Product 3 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
                     <img src="hostel img\pg3.png" alt="Hostel Image">
                     <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> <i class="fa-solid fa-person-dress" style="color: #253c65;"></i> Coed</p>
-                    <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
-                       <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
+                    
+                    <!-- Directions Link -->
+                    <a href="#" class="direction" id="openMap">
+                      <u><i class="fa-solid fa-location-dot"></i> Directions</u>
                     </a>
+  
+                      <!-- Custom Overlay for Google Maps -->
+                      <div id="mapOverlay" class="map-overlay" style="display:none;">
+                        <div class="map-container">
+                        <button type="button" id="closeMap" class="btn-close-map">X</button>
+                        <iframe
+                          id="mapIframe" 
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.004138567393!2d73.84941022465239!3d18.528715118926552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c08eadde05cf%3A0xa674cc2078724e8c!2sCoep%20Hostel!5e0!3m2!1sen!2sin!4v1729702383267!5m2!1sen!2sin" width="1200" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                          width="100%"
+                          height="450" 
+                          style="border:0;" 
+                          allowfullscreen="" 
+                          loading="lazy">
+                        </iframe>
+                        </div>
+                      </div>
+
                     <div class="card-content">
                       <h1>Rajiv Patil</h1>
                       <p>Shivaji Nagar</p>
@@ -351,9 +361,28 @@
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
                     <img src="hostel img\pg4.png" alt="Hostel Image">
                     <p class="gender-text"><i class="fa-solid fa-person-dress" style="color: #253c65;"></i> Female</p>
-                    <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
-                       <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
-                    </a>
+                    
+                    <!-- Directions Link -->
+                    <a href="#" class="direction" id="openMap">
+                      <u><i class="fa-solid fa-location-dot"></i> Directions</u>
+                      </a>
+  
+                      <!-- Custom Overlay for Google Maps -->
+                      <div id="mapOverlay" class="map-overlay" style="display:none;">
+                        <div class="map-container">
+                        <button type="button" id="closeMap" class="btn-close-map">X</button>
+                        <iframe 
+                          id="mapIframe"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.112180622303!2d73.84742137465224!3d18.52383206907575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1b8f4f1fb69%3A0x2c051a3a89c4556b!2sBankar%20Girls%20Hostel!5e0!3m2!1sen!2sin!4v1729702439954!5m2!1sen!2sin" width="1200" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                          width="100%"
+                          height="450" 
+                          style="border:0;" 
+                          allowfullscreen="" 
+                          loading="lazy">
+                        </iframe>
+                        </div>
+                      </div>
+
                     <div class="card-content">
                       <h1>Bankar Girls</h1>
                       <p>Shivaji Nagar</p>
@@ -371,14 +400,34 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- Product 5 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
                     <img src="hostel img\pg5.png" alt="Hostel Image">
                     <p class="gender-text"><i class="fa-solid fa-person-dress" style="color: #253c65;"></i> Female</p>
-                    <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
-                       <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
-                    </a>
+                    
+                    <!-- Directions Link -->
+                    <a href="#" class="direction" id="openMap">
+                      <u><i class="fa-solid fa-location-dot"></i> Directions</u>
+                      </a>
+  
+                      <!-- Custom Overlay for Google Maps -->
+                      <div id="mapOverlay" class="map-overlay" style="display:none;">
+                        <div class="map-container">
+                        <button type="button" id="closeMap" class="btn-close-map">X</button>
+                        <iframe 
+                          id="mapIframe"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15133.011102631464!2d73.81918178715816!3d18.5174759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf34d972a6b9%3A0x3207cb10c088fdec!2sVidya%20Hostel!5e0!3m2!1sen!2sin!4v1729702561471!5m2!1sen!2sin" width="1200" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                          width="100%"
+                          height="450" 
+                          style="border:0;" 
+                          allowfullscreen="" 
+                          loading="lazy">
+                        </iframe>
+                        </div>
+                      </div>
+
                     <div class="card-content">
                       <h1>Vidya Bhand</h1>
                       <p>Shivaji Nagar</p>
@@ -396,14 +445,34 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- Product 6 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
                     <img src="hostel img\pg6.png" alt="Hostel Image">
                     <p class="gender-text"><i class="fa-solid fa-person-dress" style="color: #253c65;"></i> Female</p>
-                    <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
-                       <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
-                    </a>
+                    
+                    <!-- Directions Link -->
+                    <a href="#" class="direction" id="openMap">
+                      <u><i class="fa-solid fa-location-dot"></i> Directions</u>
+                      </a>
+  
+                      <!-- Custom Overlay for Google Maps -->
+                      <div id="mapOverlay" class="map-overlay" style="display:none;">
+                        <div class="map-container">
+                        <button type="button" id="closeMap" class="btn-close-map">X</button>
+                        <iframe 
+                          id="mapIframe"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.952149421045!2d73.8389215746524!3d18.531064368854665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf001918e719%3A0x7f22be264edf2dff!2sshiroz%20girls%20pg!5e0!3m2!1sen!2sin!4v1729702776287!5m2!1sen!2sin" width="1200" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                          width="100%"
+                          height="450" 
+                          style="border:0;" 
+                          allowfullscreen="" 
+                          loading="lazy">
+                        </iframe>
+                        </div>
+                      </div>
+
                     <div class="card-content">
                       <h1>Siroz Dorm</h1>
                       <p>Shivaji Nagar</p>
@@ -433,9 +502,28 @@
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
                     <img src="hostel img\pg7.png" alt="Hostel Image">
                     <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> Male</p>
-                    <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
-                       <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
-                    </a>
+                    
+                    <!-- Directions Link -->
+                    <a href="#" class="direction" id="openMap">
+                      <u><i class="fa-solid fa-location-dot"></i> Directions</u>
+                      </a>
+  
+                      <!-- Custom Overlay for Google Maps -->
+                      <div id="mapOverlay" class="map-overlay" style="display:none;">
+                        <div class="map-container">
+                        <button type="button" id="closeMap" class="btn-close-map">X</button>
+                        <iframe 
+                          id="mapIframe"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.5495306595553!2d73.82631957465176!3d18.504052969679677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf0046f64103%3A0x4fa0e044691064d1!2sJadhav%20PG%20Hostel!5e0!3m2!1sen!2sin!4v1729702861316!5m2!1sen!2sin" width="1200" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                          width="100%"
+                          height="450" 
+                          style="border:0;" 
+                          allowfullscreen="" 
+                          loading="lazy">
+                        </iframe>
+                        </div>
+                      </div>
+
                     <div class="card-content">
                       <h1>Jadhav PG</h1>
                       <p>Shivaji Nagar</p>
@@ -453,14 +541,34 @@
                     </div>
                   </div>
                 </div> 
+
                 <!-- Product 8 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
                     <img src="hostel img\pg8.png" alt="Hostel Image">
                     <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> Male</p>
-                    <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
-                       <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
-                    </a>
+                    
+                    <!-- Directions Link -->
+                    <a href="#" class="direction" id="openMap">
+                      <u><i class="fa-solid fa-location-dot"></i> Directions</u>
+                      </a>
+  
+                      <!-- Custom Overlay for Google Maps -->
+                      <div id="mapOverlay" class="map-overlay" style="display:none;">
+                        <div class="map-container">
+                        <button type="button" id="closeMap" class="btn-close-map">X</button>
+                        <iframe 
+                          id="mapIframe"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.1138155179506!2d73.84584217465229!3d18.523758169077976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1523947b10b%3A0xea00fb855f7a72cc!2sSiddhivinayak%20Apartment!5e0!3m2!1sen!2sin!4v1729702970255!5m2!1sen!2sin" width="1200" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                          width="100%"
+                          height="450" 
+                          style="border:0;" 
+                          allowfullscreen="" 
+                          loading="lazy">
+                        </iframe>
+                        </div>
+                      </div>
+
                     <div class="card-content">
                       <h1>Siddhivinayak</h1>
                       <p>Shivaji Nagar</p>
@@ -479,14 +587,34 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- Product 9 -->
                 <div class="product">
                   <div class="card" style="width: 52rem; height: 15rem; position: relative;">
                     <img src="hostel img\pg9.png" alt="Hostel Image">
                     <p class="gender-text"><i class="fa-solid fa-person" style="color: #253c65;"></i> <i class="fa-solid fa-person-dress" style="color: #253c65;"></i> Coed</p>
-                    <a href="https://www.google.com/maps/place/Coep+Hostel/@18.5283365,73.8485828,16.86z/data=!4m6!3m5!1s0x3bc2c08eadde05cf:0xa674cc2078724e8c!8m2!3d18.5285503!4d73.8518696!16s%2Fg%2F11t4" target="_blank">
-                       <u class="direction"><i class="fa-solid fa-location-dot"></i> Directions</u>
-                    </a>
+                    
+                    <!-- Directions Link -->
+                    <a href="#" class="direction" id="openMap">
+                      <u><i class="fa-solid fa-location-dot"></i> Directions</u>
+                      </a>
+  
+                      <!-- Custom Overlay for Google Maps -->
+                      <div id="mapOverlay" class="map-overlay" style="display:none;">
+                        <div class="map-container">
+                        <button type="button" id="closeMap" class="btn-close-map">X</button>
+                        <iframe 
+                          id="mapIframe"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3237090425914!2d73.83662187465195!3d18.514268269367843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bff4f043380d%3A0xa4b5e644eec9b46c!2sSdanand%20PG!5e0!3m2!1sen!2sin!4v1729703038568!5m2!1sen!2sin" width="1200" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                          width="100%"
+                          height="450" 
+                          style="border:0;" 
+                          allowfullscreen="" 
+                          loading="lazy">
+                        </iframe>
+                        </div>
+                      </div>
+
                     <div class="card-content">
                       <h1>Sdanand</h1>
                       <p>Decaan Gymkhana</p>

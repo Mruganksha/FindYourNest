@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   
 
-
-
+//open map
 $('#openMap').on('click', function (e) {
     e.preventDefault();
     // Show the map overlay
