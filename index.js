@@ -102,3 +102,5 @@ rangeInput.forEach(input =>{
         }
     });
 });
+
+
